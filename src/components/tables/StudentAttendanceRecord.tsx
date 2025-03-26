@@ -11,7 +11,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronLeft, ChevronRight, FilterX, Loader2, MoreHorizontal, Pencil, PlusCircle } from "lucide-react"
+import { ArrowUpDown, ChevronLeft, ChevronRight, FilterX, Loader2, MoreHorizontal, Pencil, ListFilter } from "lucide-react"
 import * as XLSX from 'xlsx'; 
 import { Button } from "@/components/ui/button"
 import {
@@ -415,7 +415,7 @@ export function StudentAttendanceRecord() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="ml-2 border-dashed bg-transparent">
-                    <PlusCircle className="mr-1" /> Subject
+                    <ListFilter className="mr-1" /> Subject
                     {table.getColumn("subject")?.getFilterValue() ? (
                       <div className="flex gap-2">
                         <span className="font-thin text-gray-500">|</span>
@@ -441,7 +441,7 @@ export function StudentAttendanceRecord() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="ml-2 border-dashed bg-transparent">
-                    <PlusCircle className="mr-1" /> Course & Section
+                    <ListFilter className="mr-1" /> Course & Section
                     {table.getColumn("course_section")?.getFilterValue() ? (
                       <div className="flex gap-2">
                         <span className="font-thin text-gray-500">|</span>
@@ -467,7 +467,7 @@ export function StudentAttendanceRecord() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="ml-2 border-dashed bg-transparent">
-                    <PlusCircle className="mr-1" /> Date
+                    <ListFilter className="mr-1" /> Date
                     {table.getColumn("date")?.getFilterValue() ? (
                       <div className="flex gap-2">
                         <span className="font-thin text-gray-500">|</span>
