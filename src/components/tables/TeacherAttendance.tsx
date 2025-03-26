@@ -11,7 +11,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronLeft, ChevronRight, FilterX, MoreHorizontal, PlusCircle } from "lucide-react"
+import { ArrowUpDown, ChevronLeft, ChevronRight, FilterX, ListFilter, MoreHorizontal, } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -362,7 +362,7 @@ export function TeacherAttendance() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="ml-2 border-dashed bg-transparent">
-                    <PlusCircle className="mr-1" /> Course & Section
+                    <ListFilter className="mr-1" /> Course & Section
                     {table.getColumn("course_section")?.getFilterValue() ? (
                       <div className="flex gap-2">
                         <span className="font-thin text-gray-500">|</span>
@@ -388,7 +388,7 @@ export function TeacherAttendance() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="ml-2 border-dashed bg-transparent">
-                    <PlusCircle className="mr-1" /> Date
+                    <ListFilter className="mr-1" /> Date
                     {table.getColumn("date")?.getFilterValue() ? (
                       <div className="flex gap-2">
                         <span className="font-thin text-gray-500">|</span>
